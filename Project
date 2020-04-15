@@ -4,19 +4,120 @@
 #include<cstdlib>
 #include<ctime>
 using namespace std;
+int T=-1;
+int K=-1;
+int Y=-1;
+int Y1=0;
+int Y2=0;
+int Y3=0;
+int Y4=0;
+int x1=0;
+int x2=0;
+int x3=0;
+int x4=0;
+int S1=15000,S2=15000,S3=15000,S4=15000;
+int A[21]={};
+string H[21];
+string L[21];
+
+int B[21]={};
 void drow(string a,string b,string c,string d,int x,string z){
 	int A=a.size();
 	int B=b.size();
 	int C=c.size();
 	int D=d.size();
 	int Sum=A+B+C+D;
+
 	for(int i=0;i<61;i++){
 		cout<<"*";		
 	}
 	cout<<"\n";
-	for(int i=0;i<5;i++){
+	for(int j=0;j<5;j++){
 		for(int i=0;i<65;i++){
-			if((i%10)==0){
+				if(i==5&&j==0&&x1==6){
+				cout<<"1 "; 
+				i+=2;
+				}else if(i==5&&j==1&&x2==6){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==5&&j==2&&x3==6){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==5&&j==3&&x4==6){
+				cout<<"4 ";	
+				i+=2;				
+				}
+				if(i==15&&j==0&&x1==7){
+				cout<<"1 ";
+				i+=2;
+				}else if(i==15&&j==1&&x2==7){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==15&&j==2&&x3==7){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==15&&j==3&&x4==7){
+				cout<<"4 ";
+				i+=2;					
+				}
+				
+				if(i==25&&j==0&&x1==8){
+				cout<<"1 ";
+				i+=2;
+				}else if(i==25&&j==1&&x2==8){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==25&&j==2&&x3==8){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==25&&j==3&&x4==8){
+				cout<<"4 ";
+				i+=2;					
+				}
+				
+				if(i==35&&j==0&&x1==9){
+				cout<<"1 ";
+				i+=2;
+				}else if(i==35&&j==1&&x2==9){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==35&&j==2&&x3==9){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==35&&j==3&&x4==9){
+				cout<<"4 ";
+				i+=2;					
+				} 
+					
+				if(i==45&&j==0&&x1==10){
+				cout<<"1 ";
+				i+=2;
+				}else if(i==45&&j==1&&x2==10){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==45&&j==2&&x3==10){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==45&&j==3&&x4==10){
+				cout<<"4 ";
+				i+=2;					
+				}
+				
+				if(i==55&&j==0&&x1==11){
+				cout<<"1  ";
+				i+=2;
+				}else if(i==55&&j==1&&x2==11){
+				cout<<"2  ";
+				i+=2;	
+				}else if(i==55&&j==2&&x3==11){
+				cout<<"3  ";	
+				i+=2;
+				}else if(i==55&&j==3&&x4==11){
+				cout<<"4  ";
+				i+=2;					
+				}				
+															
+			else if((i%10)==0){
 				cout<<"*";
 			}else if(i==64){
 				cout<<"\n";
@@ -30,11 +131,37 @@ void drow(string a,string b,string c,string d,int x,string z){
 		cout<<"*";		
 	}
 	cout<<"\n";
-	for(int i=0;i<5;i++){	
-		if(i==0){
-			for(int i=0;i<4;i++){
+	for(int h=0;h<5;h++){	
+		if(h==0){
+			for(int j=0;j<3;j++){
 			for(int i=0;i<61;i++){
-				if(i==0){
+				if(i==5&&j==0&&x1==5){
+				cout<<"1";
+				i++;				
+				}else if(i==5&&j==1&&x2==5){
+				cout<<"2";
+				i++;					
+				}else if(i==5&&j==2&&x3==5){
+				cout<<"3";
+				i++;					
+				}else if(i==5&&j==3&&x4==5){
+				cout<<"4";
+				i++;									
+				}				
+				if(i==55&&j==0&&x1==12){
+				cout<<"1  ";
+				i+=2;
+				}else if(i==55&&j==1&&x2==12){
+				cout<<"2  ";
+				i+=2;	
+				}else if(i==55&&j==2&&x3==12){
+				cout<<"3  ";	
+				i+=2;
+				}else if(i==55&&j==3&&x4==12){
+				cout<<"4  ";
+				i+=2;					
+				}						
+				else if(i==0){
 					cout<<"*";			
 				}else if(i==10){
 					cout<<"*";
@@ -48,9 +175,9 @@ void drow(string a,string b,string c,string d,int x,string z){
 				}
 		
 			}
-			if(i==2){
+			if(j==0){
 				for(int i=0;i<61;i++){
-				if(i==0){
+				 if(i==0){
 					cout<<"*";		
 				}else if(i==10){
 					cout<<"*";
@@ -75,7 +202,68 @@ void drow(string a,string b,string c,string d,int x,string z){
 					cout<<" ";
 				}
 			}
-			}		
+			}
+			if(j==1){
+				for(int i=0;i<61;i++){
+				if(i==0){
+					cout<<"*";		
+				}else if(i==10){
+					cout<<"*";
+				}else if(i==50){
+					cout<<"*";
+				}else if(i==60){
+					cout<<"*";
+					cout<<"\n";
+				}else if(i==12){
+					cout<<S1<<" ";
+					if(S1>9999){
+					i+=5;	
+					}
+					else if(S1<9000){
+					i+=4;	
+					}else if(S1==0){						
+						i++;
+					}else{
+					}
+				}else if(i==22){
+					cout<<S2<<" ";
+					if(S2>9999){
+					i+=5;	
+					}
+					else if(S2<9000){
+					i+=5;	
+					}else if(S2==0){					
+							i++;
+					}else{
+					}
+				}else if(i==32){
+					cout<<S3<<" ";
+					if(S3>9999){
+					i+=5;	
+					}
+					else if(S3<9000){
+					i+=6;	
+					}else if(S3==0){
+							i++;
+					}else{
+					}
+				}else if(i==42){
+					cout<<S4<<" ";
+					if(S4>9999){
+					i+=5;	
+					}
+					else if(S4<9000){
+					i+=7;	
+					}else if(S4==0){						
+							i++;
+					}else{
+					}
+				}else{
+					cout<<" ";
+				}
+			}
+			}
+					
 		}
 				for(int i=0;i<61;i++){
 				if(i==0){
@@ -103,9 +291,39 @@ void drow(string a,string b,string c,string d,int x,string z){
 			}
 			cout<<"\n";
 		}
-			for(int i=0;i<5;i++){
+		
+		if(h==1){
+			for(int j=0;j<5;j++){
 			for(int i=0;i<61;i++){
-				if(i==0){
+				if(i==5&&j==0&&x1==4){
+				cout<<"1";
+				i++;				
+				}else if(i==5&&j==1&&x2==4){
+				cout<<"2";	
+				i++;				
+				}else if(i==5&&j==2&&x3==4){
+				cout<<"3";
+				i++;					
+				}else if(i==5&&j==3&&x4==4){
+				cout<<"4";
+				i++;									
+				}
+				
+				if(i==55&&j==0&&x1==13){
+				cout<<"1  ";
+				i+=2;
+				}else if(i==55&&j==1&&x2==13){
+				cout<<"2  ";
+				i+=2;	
+				}else if(i==55&&j==2&&x3==13){
+				cout<<"3  ";	
+				i+=2;
+				}else if(i==55&&j==3&&x4==13){
+				cout<<"4  ";
+				i+=2;					
+				}
+								
+				else if(i==0){
 					cout<<"*";			
 				}else if(i==10){
 					cout<<"*";
@@ -120,7 +338,7 @@ void drow(string a,string b,string c,string d,int x,string z){
 		
 			}		
 		}
-		if(i>=0&&i<=3){
+		if(h>=0&&h<=3){
 			for(int i=0;i<61;i++){
 				if(i>=0&&i<=10){
 					cout<<"*";
@@ -133,23 +351,309 @@ void drow(string a,string b,string c,string d,int x,string z){
 		}
 		cout<<"\n";			
 	}else{
-		
-	}
+					
+		}
 
+	}
+	if(h==2){
+			for(int j=0;j<5;j++){
+			for(int i=0;i<61;i++){
+				if(i==5&&j==0&&x1==3){
+				cout<<"1";
+				i++;
+				}else if(i==5&&j==1&&x2==3){
+				cout<<"2";
+				i++;					
+				}else if(i==5&&j==2&&x3==3){
+				cout<<"3";
+				i++;					
+				}else if(i==5&&j==3&&x4==3){
+				cout<<"4";
+				i++;									
+				}
+				if(i==55&&j==0&&x1==14){
+				cout<<"1  ";
+				i+=2;
+				}else if(i==55&&j==1&&x2==14){
+				cout<<"2  ";
+				i+=2;	
+				}else if(i==55&&j==2&&x3==14){
+				cout<<"3  ";	
+				i+=2;
+				}else if(i==55&&j==3&&x4==14){
+				cout<<"4  ";
+				i+=2;					
+				}				
+								
+				else if(i==0){
+					cout<<"*";			
+				}else if(i==10){
+					cout<<"*";
+				}else if(i==50){
+					cout<<"*";
+				}else if(i==60){
+					cout<<"*";
+					cout<<"\n";
+				}else{
+					cout<<" ";
+				}
+		
+			}		
+		}
+		if(h>=0&&h<=3){
+			for(int i=0;i<61;i++){
+				if(i>=0&&i<=10){
+					cout<<"*";
+				}else if(i>=50&&i<=60){
+					cout<<"*";			
+				}else {
+					cout<<" ";
+				}
+
+		}
+		cout<<"\n";			
+	}else{
+					
+		}
+
+	}
+	if(h==3){
+			for(int j=0;j<5;j++){
+			for(int i=0;i<61;i++){
+				if(i==5&&j==0&&x1==2){
+				cout<<"1";
+				i++;				
+				}else if(i==5&&j==1&&x2==2){
+				cout<<"2";
+				i++;					
+				}else if(i==5&&j==2&&x3==2){
+				cout<<"3";
+				i++;					
+				}else if(i==5&&j==3&&x4==2){
+				cout<<"4";
+				i++;									
+				}
+				
+				if(i==55&&j==0&&x1==15){
+				cout<<"1  ";
+				i+=2;
+				}else if(i==55&&j==1&&x2==15){
+				cout<<"2  ";
+				i+=2;	
+				}else if(i==55&&j==2&&x3==15){
+				cout<<"3  ";	
+				i+=2;
+				}else if(i==55&&j==3&&x4==15){
+				cout<<"4  ";
+				i+=2;					
+				}
+												
+				else if(i==0){
+					cout<<"*";			
+				}else if(i==10){
+					cout<<"*";
+				}else if(i==50){
+					cout<<"*";
+				}else if(i==60){
+					cout<<"*";
+					cout<<"\n";
+				}else{
+					cout<<" ";
+				}
+		
+			}		
+		}
+		if(h>=0&&h<=3){
+			for(int i=0;i<61;i++){
+				if(i>=0&&i<=10){
+					cout<<"*";
+				}else if(i>=50&&i<=60){
+					cout<<"*";			
+				}else {
+					cout<<" ";
+				}
+
+		}
+		cout<<"\n";			
+	}else{
+					
+		}
+
+	}
+	if(h==4){
+			for(int j=0;j<5;j++){
+			for(int i=0;i<61;i++){
+				if(i==5&&j==0&&x1==1){
+				cout<<"1";
+				i++;				
+				}else if(i==5&&j==1&&x2==1){
+				cout<<"2";
+				i++;					
+				}else if(i==5&&j==2&&x3==1){
+				cout<<"3";	
+				i++;								
+				}else if(i==5&&j==3&&x4==1){
+				cout<<"4";
+				i++;													
+				}else if(i==3&&j==2){
+					cout<<H[1];
+				}else if(i==3&&j==2){
+					cout<<L[1];
+				}
+				
+				if(i==55&j==0&x1==16){
+				cout<<"1  ";
+				i+=2;
+				}else if(i==55&&j==1&&x2==16){
+				cout<<"2  ";
+				i+=2;	
+				}else if(i==55&&j==2&&x3==16){
+				cout<<"3  ";	
+				i+=2;
+				}else if(i==55&&j==3&&x4==16){
+				cout<<"4  ";
+				i+=2;					
+				}
+				
+				else if(i==0){
+					cout<<"*";			
+				}else if(i==10){
+					cout<<"*";
+				}else if(i==50){
+					cout<<"*";
+				}else if(i==60){
+					cout<<"*";
+					cout<<"\n";
+				}else{
+					cout<<" ";
+				}
+		
+			}		
+		}
+		if(h>=0&&h<=3){
+			for(int i=0;i<61;i++){
+				if(i>=0&&i<=10){
+					cout<<"*";
+				}else if(i>=50&&i<=60){
+					cout<<"*";			
+				}else {
+					cout<<" ";
+				}
+
+		}
+		cout<<"\n";			
+	}else{
+					
+		}
+
+	}
 	}
 	for(int i=0;i<61;i++){
 		cout<<"*";		
 	}
 	cout<<"\n";
-	for(int i=0;i<5;i++){
+	for(int j=0;j<5;j++){
 		for(int i=0;i<65;i++){
+			
+				if(i==55&&j==0&&x1==17){
+				cout<<"1 ";
+				i+=2;
+				}else if(i==55&j==1&&x2==17){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==55&&j==2&&x3==17){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==55&&j==3&&x4==17){
+				cout<<"4 ";
+				i+=2;					
+				}
+				
+				if(i==45&&j==0&&x1==18){
+				cout<<"1 ";
+				i+=2;
+				}else if(i==45&&j==1&&x2==18){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==45&&j==2&&x3==18){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==45&&j==3&&x4==18){
+				cout<<"4 ";
+				i+=2;					
+				}
+				
+				if(i==35&j==0&x1==19){
+				cout<<"1 ";
+				i+=2;
+				}else if(i==35&&j==1&&x2==19){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==35&&j==2&&x3==19){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==35&&j==3&&x4==19){
+				cout<<"4 ";
+				i+=2;					
+				} 
+					
+				if(i==25&&j==0&&x1==20){
+				cout<<"1 ";
+				i+=2;
+				}else if(i==25&&j==1&&x2==20){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==25&&j==2&&x3==20){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==25&&j==3&&x4==20){
+				cout<<"4 ";
+				i+=2;					
+				}
+				
+				if(i==15&&j==0&&x1==21){
+				cout<<"1 ";
+				i+=2;
+				}else if(i==15&&j==1&&x2==21){
+				cout<<"2 ";
+				i+=2;	
+				}else if(i==15&&j==2&&x3==21){
+				cout<<"3 ";	
+				i+=2;
+				}else if(i==15&&j==3&&x4==21){
+				cout<<"4 ";
+				i+=2;					
+				}			
+			
+				if(i==5&j==0&x1==22){
+				cout<<"1";
+				i++;
+				}else if(i==5&&j==1&&x2==22){
+				cout<<"2";
+				i++;	
+				}else if(i==5&&j==2&&x3==22){
+				cout<<"3";
+				i++;	
+				}else if(i==5&&j==3&&x4==22){
+				cout<<"4";
+				i++;					
+				}			
+			
 			if((i%10)==0){
 				cout<<"*";
 			}else if(i==64){
 				cout<<"\n";
+			}else if(i==5&&j==0&&T==0){
+				cout<<"1";
+			}else if(i==5&&j==1&&T<=1){
+				cout<<"2";
+			}else if(i==5&&j==2&&T<=2){
+				cout<<"3";
+			}else if(i==5&&j==3&&T<=3){
+				cout<<"4";
 			}else{
 				cout<<" ";
-			}			
+			}	
 		}
 	
 	}
@@ -157,9 +661,14 @@ void drow(string a,string b,string c,string d,int x,string z){
 		cout<<"*";		
 	}
 	cout<<"\n";
+	if(T<4)T=T+1;
 }
 
 int main(){
+	for(int i=0;i<21;i++){
+		A[i]=0;
+		B[i]=0;
+	}
 	srand( time( 0 ) );
 	int Num=0;
 	string Answer;
@@ -169,40 +678,136 @@ int main(){
 	getline(cin,PlayerName[i-1]);		
 	}
 	drow(PlayerName[0],PlayerName[1],PlayerName[2],PlayerName[3],Num,Answer);
-	int A=rand()%4+1;
-	cout<<"Frist Player Play ["<<A<<"] = "<<PlayerName[A-1]<<"\n";
-	int B=rand()%4+1;
-	if(B==A){
-		B=rand()%4+1;
-	}else{
-	}
-	cout<<"Second Player Play ["<<B<<"] = "<<PlayerName[B-1]<<"\n";
-	int C=rand()%4+1;
-	if(C==A){
-		C=rand()%4+1;
-	}else if(C==B){
-		C=rand()%4+1;
-	}else{
-	}
-	cout<<"Third Player Play ["<<C<<"] = "<<PlayerName[C-1]<<"\n";
-	int D=rand()%4+1;
-	if(D==A){
-		D=rand()%4+1;
-	}else if(D==B){
-		D=rand()%4+1;
-	}else if(D==C){
-		D=rand()%4+1;
-	}else{
-	}
-	cout<<"Fourth Player Play ["<<D<<"] = "<<PlayerName[D-1]<<"\n";	
 	for(;;){
-	Num=rand()%6+1;
-	drow(PlayerName[0],PlayerName[1],PlayerName[2],PlayerName[3],Num,Answer);
-	cout<<"BH=Buy Home"<<"\n";
-	cout<<"BL=Buy Land"<<"\n";
-	cout<<" S = Skip"<<"\n";
-	cout<<"Put You Answer"<<"\n";
-	cin>>Answer;
-	}
 
+		  if(A[x1]==2&&Y%4==0||A[x1]==3&&Y%4==0||A[x1]==4&&Y%4==0){
+		S1-=2500;
+		cout<<"\n"<<"Player 1 Money - 2500$"<<"\n";
+	}else if(A[x2]==1&&Y%4==1||A[x2]==3&&Y%4==1||A[x2]==4&&Y%4==1){
+		S2-=2500;
+		cout<<"\n"<<"Player 2 Money - 2500$"<<"\n";		
+	}else if(A[x3]==2&&Y%4==2||A[x3]==1&&Y%4==2||A[x3]==4&&Y%4==2){
+		S3-=2500;
+		cout<<"\n"<<"Player 3 Money - 2500$"<<"\n";		
+	}else if(A[x4]==2&&Y%4==3||A[x4]==3&&Y%4==3||A[x4]==4&&Y%4==3){
+		S4-=2500;
+		cout<<"\n"<<"Player 4 Money - 5000$"<<"\n";		
+	}else if(B[x1]==2&&Y%4==0||B[x1]==3&&Y%4==0||B[x1]==4&&Y%4==0){
+		S1-=5000;
+		cout<<"\n"<<"Player 1 Money - 5000$"<<"\n";		
+	}else if(B[x2]==1&&Y%4==1||B[x2]==3&&Y%4==1||B[x2]==4&&Y%4==1){
+		S2-=5000;
+		cout<<"\n"<<"Player 2 Money - 5000$"<<"\n";		
+	}else if(B[x3]==2&&Y%4==2||B[x3]==1&&Y%4==2||B[x3]==4&&Y%4==2){
+		S3-=5000;
+		cout<<"\n"<<"Player 3 Money - 5000$"<<"\n";		
+	}else if(B[x4]==2&&Y%4==3||B[x4]==3&&Y%4==3||B[x4]==1&&Y%4==3){
+		S4-=5000;
+		cout<<"\n"<<"Player 4 Money - 5000$"<<"\n";		
+	}else{
+	}
+	
+			if(Y%4==0){
+			Y1++;
+			if(S1>0)x1+=Num;
+		}else if(Y%4==1){
+			Y2++;
+			if(S2>0)x2+=Num;
+		}else if(Y%4==2){
+			Y3++;
+			if(S3>0)x3+=Num;
+		}else if(Y%4==3){
+			Y4++;
+			if(S4>0)x4+=Num;
+		}else{
+		}
+
+			  if(x1>22){
+			x1=abs(x1-22);
+			S1+=500;
+		}else if(x2>22){
+			x2=abs(x2-22);
+			S2+=500;
+		}else if(x3>22){
+			x3=abs(x3-22);
+			S3+=500;
+		}else if(x4>22){
+			x4=abs(x4-22);
+			S4+=500;
+		}else{
+		}		
+	drow(PlayerName[0],PlayerName[1],PlayerName[2],PlayerName[3],Num,Answer);
+			  if(S1>0&&S2<=0&&S3<=0&&S4<=0){
+			cout<<"PLAYER 1 WIN";
+			break;
+		}else if(S2>0&&S1<=0&&S3<=0&&S4<=0){
+			cout<<"PLAYER 2 WIN";
+			break;
+		}else if(S3>0&&S2<=0&&S1<=0&&S4<=0){
+			cout<<"PLAYER 3 WIN";
+			break;			
+		}else if(S4>0&&S2<=0&&S3<=0&&S1<=0){
+			cout<<"PLAYER 4 WIN";
+			break;			
+		}else{
+		}
+	cout<<"BH=Buy Home 5000$"<<"\n";
+	cout<<"BL=Buy Land 10000$"<<"\n";
+	cout<<" S = Skip"<<"\n";
+	cout<<"Player "<<K%4+1<<" Put You Answer"<<"\n";
+	cin>>Answer;
+		  if(Answer=="BH"&&Y%4==0&&A[x1]==0&&S1>5000){
+			A[x1]=1;
+			S1-=5000;
+	}else if(Answer=="BL"&&Y%4==0&&B[x1]==0&&S1>10000){
+			B[x1]=1;
+			S1-=10000;
+	}else if(Answer=="BH"&&Y%4==1&&A[x2]==0&&S2>5000){
+			A[x2]=2;
+			S2-=5000;			
+	}else if(Answer=="BL"&&Y%4==1&&B[x2]==0&&S2>10000){
+			B[x2]=2;
+			S2-=10000;			
+	}else if(Answer=="BH"&&Y%4==2&&A[x3]==0&&S3>5000){
+			A[x3]=3;
+			S3-=5000;			
+	}else if(Answer=="BL"&&Y%4==2&&B[x3]==0&&S3>10000){
+			B[x3]=3;
+			S3-=10000;			
+	}else if(Answer=="BH"&&Y%4==3&&A[x4]==0&&S4>5000){
+			A[x4]=4;
+			S4-=5000;			
+	}else if(Answer=="BL"&&Y%4==3&&B[x4]==0&&S4>10000){
+			B[x4]=4;
+			S4-=10000;			
+	}else{
+	}
+	Num=rand()%4+1;
+	cout<<"\n"<<"Randome Turn "<<Num<<"\n";
+	cout<<"\n";
+	for(int i=0;i<21;i++){
+		if(A[i]==1){
+			cout<<"Home Player 1 at "<<i<<" Tax = 2500$\n";
+		}else if(B[i]==1){
+			cout<<"Land Player 1 at "<<i<<" Tax = 5000$\n";
+		}if(A[i]==2){
+			cout<<"Home Player 2 at "<<i<<" Tax = 2500$\n";
+		}else if(B[i]==2){
+			cout<<"Land Player 2 at "<<i<<" Tax = 5000$\n";
+		}if(A[i]==3){
+			cout<<"Home Player 3 at "<<i<<" Tax = 2500$\n";
+		}else if(B[i]==3){
+			cout<<"Land Player 3 at "<<i<<" Tax = 5000$\n";
+		}if(A[i]==4){
+			cout<<"Home Player 4 at "<<i<<" Tax = 2500$\n";
+		}else if(B[i]==4){
+			cout<<"Land Player 4 at "<<i<<" Tax = 5000$\n";
+		}
+	}
+	cout<<"\n";
+		Y++;
+		K++;
+		}
 }
+
+
